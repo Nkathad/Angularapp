@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12 common-heading">
+      <h1 class="">{{pageTitle}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <!-- <div class="col-lg-12">
+      <app-search-component></app-search-component>
+    </div> -->
+    <div class="col-md-1">Filter by:</div>
+    <div class="col-md-11">
+      <form id="moviepipe">
+        <input class="form-control" type="text" name="term" [(ngModel)] = "term"/>
+      </form>
+    </div>
+    <div class="clearfix"></div>
+    <div *ngFor="let productList of productList | moviepipe:term" class="col-lg-2 col-md-3 col-sm-4 col-xs-12 product-box">
+      <img [src] = "productList.thumbnailUrl" />
+      <p>{{productList.title}}</p>
+      <a [href] ="productList.url"> link </a>
+    </div>
+  </div>
+
+</div>

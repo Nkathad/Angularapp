@@ -1,0 +1,11 @@
+<div class="col-lg-1">Search by:</div>
+<div class="col-lg-11">
+  <input class="form-control" (keyup)="searchTerm$.next($event.target.value)">
+</div>
+<ul class="my-btn extraclass" *ngIf="productList">
+  <li *ngFor="let productList of productList" class="col-lg-2 col-md-3 col-sm-4 col-xs-12 product-box">
+    <img [src] = "productList.thumbnailUrl" />
+    <p>{{productList.name}}</p>
+    <a [href] ="productList.url"> link </a>
+  </li>
+</ul>

@@ -1,0 +1,20 @@
+<div class="top-header">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2">
+      <logo-component></logo-component>
+    </div>
+    <div class="col-lg-6 home-page-search">
+      <form (ngSubmit)="redirect()">
+        <div class="form-group">
+          <input type="text" class="form-control" name="searchname" [(ngModel)] ="searchname">
+          <button type="submit" class="search-btn"><i class="fa fa-search" aria-hidden="true"></i> Search</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-lg-4">
+      <navbar-component></navbar-component>
+    </div>
+  </div>
+</div>
+</div>

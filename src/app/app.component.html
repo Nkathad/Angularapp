@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<header-component></header-component>
+<div class="container-fluid">
+<filteredlist [items]="this.items"></filteredlist>
+<router-outlet></router-outlet>
+</div>

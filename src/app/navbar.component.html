@@ -1,0 +1,13 @@
+<nav class="navbar navbar-default pull-right">
+  <ul class="nav navbar-nav">
+    <li *ngFor="let navList of navList">
+      <a [routerLink]="navList.url" routerLinkActive="active">
+        <span [class]="navList.className">{{ navList.someTitle }}</span>
+        {{ navList.manuItem }}
+      </a>
+    </li>
+    <!-- <li class="active"><a routerLink="/">Home</a></li>
+    <li><a routerLink="/login">About Us</a></li>
+    <li><a routerLink="/login">Lgoin</a></li> -->
+  </ul>
+</nav>
